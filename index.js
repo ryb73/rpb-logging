@@ -1,15 +1,14 @@
 "use strict";
 
-var bunyan       = require("bunyan"),
-    strftime     = require("strftime"),
-    PrettyStream = require("bunyan-prettystream");
+var bunyan   = require("bunyan"),
+    strftime = require("strftime"),
+    bFormat  = require("bunyan-format");
 
 var DATE_FORMAT = "%Y-%m-%d-%H-%M-%S";
 
 var loggers = {};
 
-var prettyStdOut = new PrettyStream();
-prettyStdOut.pipe(process.stdout);
+var formatter = bFormat();
 
 module.exports = function createLogger(name) {
   name = name || "index";
@@ -20,7 +19,7 @@ module.exports = function createLogger(name) {
       streams: [
         {
           level: "trace",
-          stream: prettyStdOut
+          stream: formatter
         },
         {
           level: "debug",
