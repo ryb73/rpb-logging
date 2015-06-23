@@ -1,0 +1,16 @@
+{
+  "name": "rpb-logging",
+  "version": "1.0.0",
+  "description": "My personal logging handler",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryb73/rpb-logging.git"
+  },
+  "author": "Ryan Biwer",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/ryb73/rpb-logging/issues"
+  },
+  "homepage": "https://github.com/ryb73/rpb-logging"
+}
