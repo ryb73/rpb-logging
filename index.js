@@ -10,15 +10,16 @@ var loggers = {};
 
 var formatter = bFormat();
 
-module.exports = function createLogger(name) {
+module.exports = function createLogger(name, stdoutLevel) {
   name = name || "index";
+  stdoutLevel = stdoutLevel || "trace";
 
   if(!loggers[name]) {
     loggers[name] = bunyan.createLogger({
       name: name,
       streams: [
         {
-          level: "trace",
+          level: stdoutLevel,
           stream: formatter
         },
         {
