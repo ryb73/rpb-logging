@@ -3,19 +3,27 @@
   "version": "2.3.0",
   "description": "My personal logging handler",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ryb73/rpb-logging.git"
   },
   "author": "Ryan Biwer",
-  "license": "GPL-2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ryb73/rpb-logging/issues"
   },
   "homepage": "https://github.com/ryb73/rpb-logging",
   "dependencies": {
-    "bunyan": "^1.4.0",
-    "bunyan-format": "^0.2.1",
-    "strftime": "^0.9.2"
+    "bunyan": "1.8.1",
+    "bunyan-format": "0.2.1",
+    "config": "1.21.0",
+    "strftime": "0.9.2"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.1.2"
   }
 }
